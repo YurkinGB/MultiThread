@@ -4,7 +4,7 @@ public class Main {
     static float[] arr = new float[SIZE];
 
     public static void main(String[] args) {
-        float f;
+
         for (float x : arr ) {
             x = 1;
         }
@@ -54,12 +54,14 @@ public class Main {
 
         thread1.start();
         thread2.start();
+
         try {
             thread1.join();
             thread2.join();
         }catch (InterruptedException e){
             e.printStackTrace();
         }
+
         System.out.println("Method 2->" + ((System.currentTimeMillis() - a) / 1000) + "sec");
 
     }
