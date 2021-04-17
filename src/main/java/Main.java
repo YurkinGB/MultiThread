@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     static final int SIZE = 10000000;
     static final int HALF = SIZE / 2;
@@ -5,12 +7,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        for (float x : arr ) {
-            x = 1;
-        }
-
+        Arrays.fill(arr, 1);
         method1();
+
+        Arrays.fill(arr, 1);
         method2();
+
     }
 
     public static void method1(){
